@@ -44,9 +44,9 @@ struct BackendAttributes {
   bool has_mlh;
   bool has_wdl;
   bool runs_on_cpu;
-  int suggested_num_search_threads;
-  int recommended_batch_size;
-  int maximum_batch_size;
+  int suggested_num_search_threads = 1;
+  int recommended_batch_size = 256;
+  int maximum_batch_size = 1024;
 
   void Merge(const BackendAttributes& other) {
     has_mlh &= other.has_mlh;
