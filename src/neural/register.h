@@ -29,7 +29,6 @@
 #include <vector>
 
 #include "neural/backend.h"
-
 #pragma once
 
 namespace lczero {
@@ -74,7 +73,7 @@ class BackendManager {
 
 #define REGISTER_BACKEND(factory)                                    \
   namespace {                                                        \
-  [[maybe_unused]] static SearchFactory::Register reg29c93##factory( \
+  [[maybe_unused]] static BackendManager::Register reg29c93##factory( \
       std::make_unique<factory>());                                  \
   }
 }  // namespace lczero
